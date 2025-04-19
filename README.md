@@ -1,3 +1,6 @@
+![{781675A1-B866-45DD-9D9D-676BC17B4971}](https://github.com/user-attachments/assets/91853b18-0843-419d-9ce0-ed125d2ee632)
+
+
 # Gradient Studio
 
 A powerful and intuitive gradient generator built with React and TypeScript. Create, customize, and export beautiful gradients for your web projects.

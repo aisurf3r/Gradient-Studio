@@ -68,6 +68,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 MIT License
 
 ## Author
-
-[Aisurf3r](https://github.com/aisurf3r)
 Made with ❤️ by @aisurf3r

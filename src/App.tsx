@@ -14,17 +14,14 @@ import { Github } from 'lucide-react';
 const GradientApp: React.FC = () => {
   const { gradient, themeMode } = useGradient();
 
-  // Update document title
   useEffect(() => {
     document.title = 'Gradient Studio';
   }, []);
 
-  // Update body background based on theme
   useEffect(() => {
     document.body.className = themeMode === 'dark' ? 'bg-gray-900' : 'bg-gray-100';
   }, [themeMode]);
 
-  // Generate gradient CSS
   const gradientCSS = generateGradientCSS(gradient);
 
   return (
@@ -33,29 +30,40 @@ const GradientApp: React.FC = () => {
       <GradientHeader />
       
       <main className="container mx-auto px-4 py-6 max-w-7xl">
-        {/* Main content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left column */}
-          <div className="lg:col-span-2 space-y-6">
-            <GradientPreview />
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-6 lg:col-span-2">
+            <div className="order-1">
+              <GradientPreview />
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="order-2">
               <ColorStopSlider />
+            </div>
+            
+            <div className="order-3">
+              <ColorPicker />
+            </div>
+            
+            <div className="order-4">
               <GradientControls />
             </div>
             
-            <CodeExport />
+            <div className="order-5">
+              <PresetLibrary />
+            </div>
+            
+            <div className="order-6">
+              <CodeExport />
+            </div>
           </div>
           
-          {/* Right column */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="hidden lg:flex lg:flex-col gap-6 lg:col-span-1">
             <ColorPicker />
             <PresetLibrary />
           </div>
         </div>
       </main>
       
-      {/* Footer */}
       <footer className={`py-4 mt-8 text-center text-sm ${themeMode === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-white text-gray-500'} shadow-inner`}>
         <p className="flex items-center justify-center gap-2">
           Gradient Studio - Create and customize beautiful gradients

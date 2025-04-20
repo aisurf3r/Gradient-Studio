@@ -31,33 +31,33 @@ const GradientApp: React.FC = () => {
       
       <main className="container mx-auto px-4 py-6 max-w-7xl">
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-          <div className="flex flex-col gap-6 lg:col-span-2">
-            <div className="order-1">
+          <div className="flex flex-col gap-6 lg:col-span-2 order-1">
+            <div className="order-1 lg:order-1">
               <GradientPreview />
             </div>
             
-            <div className="order-2">
+            <div className="order-2 lg:order-2">
               <ColorStopSlider />
             </div>
             
-            <div className="order-3">
+            <div className="order-3 lg:hidden">
               <ColorPicker />
             </div>
             
-            <div className="order-4">
+            <div className="order-4 lg:order-3">
               <GradientControls />
             </div>
             
-            <div className="order-5">
+            <div className="order-5 lg:hidden">
               <PresetLibrary />
             </div>
             
-            <div className="order-6">
+            <div className="order-6 lg:order-4">
               <CodeExport />
             </div>
           </div>
           
-          <div className="hidden lg:flex lg:flex-col gap-6 lg:col-span-1">
+          <div className="hidden lg:flex lg:flex-col gap-6 lg:col-span-1 order-2">
             <ColorPicker />
             <PresetLibrary />
           </div>
